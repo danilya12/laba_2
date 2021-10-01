@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лабораторная_2</title>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+        function func(){
+            var n = Number (document.forms["frm"].elements["varn"].value);
+            var x = Number (document.forms["frm"].elements["varx"].value);
+            var с = 0;
+            for(var a=0; a<=n; a++){
+                 с=(1/((2*a+1)*(x**(2*a+1))));
+            }
+            с=с*2;
+            document.writeln(с);
+        }
+      
+    </script>
+</head>
+<body>
+    <form id="frm">
+        <p>Введите число x, которое больше 1:</p>
+        <input type="text" name="varx" id="x">
+        <p>Введите число n:</p>
+        <input type="text" name="varn" id="n">
+        <input type="submit" value="OK" onclick="func()">
+    </form>
+</body>
+</html>
